@@ -1,0 +1,2 @@
+#define RAM_DOP_SIZE 30620u
+#define RAM_DOP_FNV 3213799717u

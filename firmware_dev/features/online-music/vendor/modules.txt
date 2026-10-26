@@ -1,0 +1,21 @@
+# github.com/guohuiyuan/music-lib v0.0.0-00010101000000-000000000000 => ./upstream
+## explicit; go 1.18.0
+github.com/guohuiyuan/music-lib/kugou
+github.com/guohuiyuan/music-lib/lyrics
+github.com/guohuiyuan/music-lib/model
+github.com/guohuiyuan/music-lib/netease
+github.com/guohuiyuan/music-lib/provider
+github.com/guohuiyuan/music-lib/qq
+github.com/guohuiyuan/music-lib/utils
+# github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
+## explicit; go 1.13
+github.com/skip2/go-qrcode
+github.com/skip2/go-qrcode/bitset
+github.com/skip2/go-qrcode/reedsolomon
+# golang.org/x/image v0.32.0
+## explicit; go 1.24.0
+golang.org/x/image/riff
+golang.org/x/image/vp8
+golang.org/x/image/vp8l
+golang.org/x/image/webp
+# github.com/guohuiyuan/music-lib => ./upstream

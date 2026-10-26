@@ -1,0 +1,1600 @@
+{
+  "version": 2,
+  "effects": [
+    {
+      "index": 0,
+      "key": "hall",
+      "name": "音乐厅氛围",
+      "params": [
+        {
+          "key": "dry",
+          "label": "原声",
+          "min": 0,
+          "max": 2,
+          "step": 0.01,
+          "default": 0.85,
+          "unit": ""
+        },
+        {
+          "key": "wet",
+          "label": "混响",
+          "min": 0,
+          "max": 2,
+          "step": 0.01,
+          "default": 0.75,
+          "unit": ""
+        },
+        {
+          "key": "room",
+          "label": "空间大小",
+          "min": 0.05,
+          "max": 0.98,
+          "step": 0.01,
+          "default": 0.9,
+          "unit": ""
+        },
+        {
+          "key": "damping",
+          "label": "高频阻尼",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.4,
+          "unit": ""
+        },
+        {
+          "key": "width",
+          "label": "立体宽度",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.75,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "limiter",
+      "name": "压限器",
+      "params": [
+        {
+          "key": "threshold",
+          "label": "阈值",
+          "min": -36,
+          "max": -1,
+          "step": 0.5,
+          "default": -15,
+          "unit": "dB"
+        },
+        {
+          "key": "ratio",
+          "label": "压缩比",
+          "min": 1,
+          "max": 12,
+          "step": 0.1,
+          "default": 3,
+          "unit": ""
+        },
+        {
+          "key": "attack",
+          "label": "启动时间",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "default": 10,
+          "unit": "ms"
+        },
+        {
+          "key": "release",
+          "label": "恢复时间",
+          "min": 20,
+          "max": 1000,
+          "step": 10,
+          "default": 200,
+          "unit": "ms"
+        },
+        {
+          "key": "makeup",
+          "label": "补偿增益",
+          "min": -12,
+          "max": 12,
+          "step": 0.5,
+          "default": 0,
+          "unit": "dB"
+        },
+        {
+          "key": "mix",
+          "label": "混合比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "tube",
+      "name": "仿电子管",
+      "params": [
+        {
+          "key": "drive",
+          "label": "饱和程度",
+          "min": 1,
+          "max": 6,
+          "step": 0.1,
+          "default": 3.2,
+          "unit": ""
+        },
+        {
+          "key": "bias",
+          "label": "谐波偏置",
+          "min": 0,
+          "max": 0.8,
+          "step": 0.01,
+          "default": 0.4,
+          "unit": ""
+        },
+        {
+          "key": "tone",
+          "label": "高频柔化",
+          "min": 2000,
+          "max": 18000,
+          "step": 100,
+          "default": 7000,
+          "unit": "Hz"
+        },
+        {
+          "key": "color",
+          "label": "染色比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.75,
+          "unit": ""
+        },
+        {
+          "key": "output",
+          "label": "输出增益",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.01,
+          "default": 1.4,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "v8",
+      "name": "V8 混响",
+      "params": [
+        {
+          "key": "decay",
+          "label": "尾音时长",
+          "min": 0.25,
+          "max": 5,
+          "step": 0.05,
+          "default": 1.1,
+          "unit": "s"
+        },
+        {
+          "key": "damping",
+          "label": "高频截止",
+          "min": 1000,
+          "max": 16000,
+          "step": 100,
+          "default": 6000,
+          "unit": "Hz"
+        },
+        {
+          "key": "diffusion",
+          "label": "扩散程度",
+          "min": 0.1,
+          "max": 0.8,
+          "step": 0.01,
+          "default": 0.55,
+          "unit": ""
+        },
+        {
+          "key": "width",
+          "label": "立体宽度",
+          "min": 0,
+          "max": 2,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        },
+        {
+          "key": "dry",
+          "label": "原声比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0,
+          "unit": ""
+        },
+        {
+          "key": "wet",
+          "label": "混响强度",
+          "min": 0,
+          "max": 3,
+          "step": 0.01,
+          "default": 2.04,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "warm",
+      "name": "PurestWarm3 暖声",
+      "params": [
+        {
+          "key": "color",
+          "label": "暖声程度",
+          "min": 0,
+          "max": 1.5,
+          "step": 0.01,
+          "default": 0.5,
+          "unit": ""
+        },
+        {
+          "key": "mix",
+          "label": "混合比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        },
+        {
+          "key": "output",
+          "label": "输出增益",
+          "min": 0.5,
+          "max": 1.5,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "dragonfly",
+      "name": "Dragonfly 大厅",
+      "params": [
+        {
+          "key": "room",
+          "label": "大厅规模",
+          "min": 0.5,
+          "max": 4,
+          "step": 0.1,
+          "default": 3.2,
+          "unit": ""
+        },
+        {
+          "key": "decay",
+          "label": "尾音时长",
+          "min": 0.3,
+          "max": 5,
+          "step": 0.1,
+          "default": 1.6,
+          "unit": "s"
+        },
+        {
+          "key": "predelay",
+          "label": "反射延时",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 12,
+          "unit": "ms"
+        },
+        {
+          "key": "damping",
+          "label": "高频截止",
+          "min": 2000,
+          "max": 16000,
+          "step": 100,
+          "default": 10000,
+          "unit": "Hz"
+        },
+        {
+          "key": "width",
+          "label": "立体宽度",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        },
+        {
+          "key": "early",
+          "label": "早期反射",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.3,
+          "unit": ""
+        },
+        {
+          "key": "late",
+          "label": "后期混响",
+          "min": 0,
+          "max": 1.5,
+          "step": 0.01,
+          "default": 0.85,
+          "unit": ""
+        },
+        {
+          "key": "dry",
+          "label": "原声比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.25,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "galactic",
+      "name": "Galactic3 银河",
+      "params": [
+        {
+          "key": "decay",
+          "label": "尾音收敛",
+          "min": 0.05,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.65,
+          "unit": ""
+        },
+        {
+          "key": "brightness",
+          "label": "明亮度",
+          "min": 0.2,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.7,
+          "unit": ""
+        },
+        {
+          "key": "modulation",
+          "label": "空间流动",
+          "min": 0,
+          "max": 0.6,
+          "step": 0.01,
+          "default": 0.15,
+          "unit": ""
+        },
+        {
+          "key": "density",
+          "label": "细节密度",
+          "min": 0.5,
+          "max": 1,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        },
+        {
+          "key": "size",
+          "label": "空间大小",
+          "min": 0.05,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.55,
+          "unit": ""
+        },
+        {
+          "key": "mix",
+          "label": "混响比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.7,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "stereo",
+      "name": "声场扩展",
+      "params": [
+        {
+          "key": "width",
+          "label": "立体宽度",
+          "min": 0,
+          "max": 2,
+          "step": 0.01,
+          "default": 1.25,
+          "unit": ""
+        },
+        {
+          "key": "crossfeed",
+          "label": "交叉馈送",
+          "min": 0,
+          "max": 0.5,
+          "step": 0.01,
+          "default": 0,
+          "unit": ""
+        },
+        {
+          "key": "bassmono",
+          "label": "低频居中截止",
+          "min": 0,
+          "max": 500,
+          "step": 10,
+          "default": 120,
+          "unit": "Hz"
+        },
+        {
+          "key": "output",
+          "label": "输出增益",
+          "min": -12,
+          "max": 0,
+          "step": 0.5,
+          "default": 0,
+          "unit": "dB"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "delay",
+      "name": "延迟 / 回声",
+      "params": [
+        {
+          "key": "time",
+          "label": "延迟时间",
+          "min": 20,
+          "max": 1500,
+          "step": 5,
+          "default": 250,
+          "unit": "ms"
+        },
+        {
+          "key": "feedback",
+          "label": "反馈",
+          "min": 0,
+          "max": 0.85,
+          "step": 0.01,
+          "default": 0.3,
+          "unit": ""
+        },
+        {
+          "key": "mix",
+          "label": "混合比例",
+          "min": 0,
+          "max": 0.65,
+          "step": 0.01,
+          "default": 0.2,
+          "unit": ""
+        },
+        {
+          "key": "damping",
+          "label": "回声高频截止",
+          "min": 500,
+          "max": 16000,
+          "step": 100,
+          "default": 6000,
+          "unit": "Hz"
+        },
+        {
+          "key": "pingpong",
+          "label": "左右交替",
+          "min": 0,
+          "max": 1,
+          "step": 1,
+          "default": 1,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "key": "deesser",
+      "name": "去齿音",
+      "params": [
+        {
+          "key": "frequency",
+          "label": "检测频率",
+          "min": 2000,
+          "max": 12000,
+          "step": 100,
+          "default": 6500,
+          "unit": "Hz"
+        },
+        {
+          "key": "q",
+          "label": "频带 Q",
+          "min": 0.5,
+          "max": 6,
+          "step": 0.1,
+          "default": 2.5,
+          "unit": ""
+        },
+        {
+          "key": "threshold",
+          "label": "启动阈值",
+          "min": -48,
+          "max": -6,
+          "step": 0.5,
+          "default": -24,
+          "unit": "dB"
+        },
+        {
+          "key": "reduction",
+          "label": "最大衰减",
+          "min": 0,
+          "max": 18,
+          "step": 0.5,
+          "default": 6,
+          "unit": "dB"
+        },
+        {
+          "key": "attack",
+          "label": "启动时间",
+          "min": 0.5,
+          "max": 30,
+          "step": 0.5,
+          "default": 3,
+          "unit": "ms"
+        },
+        {
+          "key": "release",
+          "label": "恢复时间",
+          "min": 20,
+          "max": 500,
+          "step": 5,
+          "default": 120,
+          "unit": "ms"
+        },
+        {
+          "key": "mix",
+          "label": "混合比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "key": "dynamic_eq",
+      "name": "动态 EQ",
+      "params": [
+        {
+          "key": "frequency",
+          "label": "中心频率",
+          "min": 20,
+          "max": 16000,
+          "step": 10,
+          "default": 250,
+          "unit": "Hz"
+        },
+        {
+          "key": "q",
+          "label": "频带 Q",
+          "min": 0.2,
+          "max": 12,
+          "step": 0.1,
+          "default": 1,
+          "unit": ""
+        },
+        {
+          "key": "threshold",
+          "label": "启动阈值",
+          "min": -48,
+          "max": 0,
+          "step": 0.5,
+          "default": -24,
+          "unit": "dB"
+        },
+        {
+          "key": "gain",
+          "label": "最大动态增益",
+          "min": -12,
+          "max": 12,
+          "step": 0.5,
+          "default": -4,
+          "unit": "dB"
+        },
+        {
+          "key": "attack",
+          "label": "启动时间",
+          "min": 2,
+          "max": 100,
+          "step": 1,
+          "default": 15,
+          "unit": "ms"
+        },
+        {
+          "key": "release",
+          "label": "恢复时间",
+          "min": 30,
+          "max": 1500,
+          "step": 10,
+          "default": 250,
+          "unit": "ms"
+        },
+        {
+          "key": "mix",
+          "label": "混合比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "index": 0,
+      "key": "hall",
+      "name": "音乐厅氛围",
+      "params": [
+        {
+          "key": "dry",
+          "label": "原声",
+          "min": 0,
+          "max": 2,
+          "step": 0.01,
+          "default": 0.85,
+          "unit": ""
+        },
+        {
+          "key": "wet",
+          "label": "混响",
+          "min": 0,
+          "max": 2,
+          "step": 0.01,
+          "default": 0.75,
+          "unit": ""
+        },
+        {
+          "key": "room",
+          "label": "空间大小",
+          "min": 0.05,
+          "max": 0.98,
+          "step": 0.01,
+          "default": 0.9,
+          "unit": ""
+        },
+        {
+          "key": "damping",
+          "label": "高频阻尼",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.4,
+          "unit": ""
+        },
+        {
+          "key": "width",
+          "label": "立体宽度",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.75,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "key": "limiter",
+      "name": "压限器",
+      "params": [
+        {
+          "key": "threshold",
+          "label": "阈值",
+          "min": -36,
+          "max": -1,
+          "step": 0.5,
+          "default": -15,
+          "unit": "dB"
+        },
+        {
+          "key": "ratio",
+          "label": "压缩比",
+          "min": 1,
+          "max": 12,
+          "step": 0.1,
+          "default": 3,
+          "unit": ""
+        },
+        {
+          "key": "attack",
+          "label": "启动时间",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "default": 10,
+          "unit": "ms"
+        },
+        {
+          "key": "release",
+          "label": "恢复时间",
+          "min": 20,
+          "max": 1000,
+          "step": 10,
+          "default": 200,
+          "unit": "ms"
+        },
+        {
+          "key": "makeup",
+          "label": "补偿增益",
+          "min": -12,
+          "max": 12,
+          "step": 0.5,
+          "default": 0,
+          "unit": "dB"
+        },
+        {
+          "key": "mix",
+          "label": "混合比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "tube",
+      "name": "仿电子管",
+      "params": [
+        {
+          "key": "drive",
+          "label": "饱和程度",
+          "min": 1,
+          "max": 6,
+          "step": 0.1,
+          "default": 3.2,
+          "unit": ""
+        },
+        {
+          "key": "bias",
+          "label": "谐波偏置",
+          "min": 0,
+          "max": 0.8,
+          "step": 0.01,
+          "default": 0.4,
+          "unit": ""
+        },
+        {
+          "key": "tone",
+          "label": "高频柔化",
+          "min": 2000,
+          "max": 18000,
+          "step": 100,
+          "default": 7000,
+          "unit": "Hz"
+        },
+        {
+          "key": "color",
+          "label": "染色比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.75,
+          "unit": ""
+        },
+        {
+          "key": "output",
+          "label": "输出增益",
+          "min": 0.5,
+          "max": 2,
+          "step": 0.01,
+          "default": 1.4,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "v8",
+      "name": "V8 混响",
+      "params": [
+        {
+          "key": "decay",
+          "label": "尾音时长",
+          "min": 0.25,
+          "max": 5,
+          "step": 0.05,
+          "default": 1.1,
+          "unit": "s"
+        },
+        {
+          "key": "damping",
+          "label": "高频截止",
+          "min": 1000,
+          "max": 16000,
+          "step": 100,
+          "default": 6000,
+          "unit": "Hz"
+        },
+        {
+          "key": "diffusion",
+          "label": "扩散程度",
+          "min": 0.1,
+          "max": 0.8,
+          "step": 0.01,
+          "default": 0.55,
+          "unit": ""
+        },
+        {
+          "key": "width",
+          "label": "立体宽度",
+          "min": 0,
+          "max": 2,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        },
+        {
+          "key": "dry",
+          "label": "原声比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0,
+          "unit": ""
+        },
+        {
+          "key": "wet",
+          "label": "混响强度",
+          "min": 0,
+          "max": 3,
+          "step": 0.01,
+          "default": 2.04,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "warm",
+      "name": "PurestWarm3 暖声",
+      "params": [
+        {
+          "key": "color",
+          "label": "暖声程度",
+          "min": 0,
+          "max": 1.5,
+          "step": 0.01,
+          "default": 0.5,
+          "unit": ""
+        },
+        {
+          "key": "mix",
+          "label": "混合比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        },
+        {
+          "key": "output",
+          "label": "输出增益",
+          "min": 0.5,
+          "max": 1.5,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "key": "dragonfly",
+      "name": "Dragonfly 大厅",
+      "params": [
+        {
+          "key": "room",
+          "label": "大厅规模",
+          "min": 0.5,
+          "max": 4,
+          "step": 0.1,
+          "default": 3.2,
+          "unit": ""
+        },
+        {
+          "key": "decay",
+          "label": "尾音时长",
+          "min": 0.3,
+          "max": 5,
+          "step": 0.1,
+          "default": 1.6,
+          "unit": "s"
+        },
+        {
+          "key": "predelay",
+          "label": "反射延时",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 12,
+          "unit": "ms"
+        },
+        {
+          "key": "damping",
+          "label": "高频截止",
+          "min": 2000,
+          "max": 16000,
+          "step": 100,
+          "default": 10000,
+          "unit": "Hz"
+        },
+        {
+          "key": "width",
+          "label": "立体宽度",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        },
+        {
+          "key": "early",
+          "label": "早期反射",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.3,
+          "unit": ""
+        },
+        {
+          "key": "late",
+          "label": "后期混响",
+          "min": 0,
+          "max": 1.5,
+          "step": 0.01,
+          "default": 0.85,
+          "unit": ""
+        },
+        {
+          "key": "dry",
+          "label": "原声比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.25,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "galactic",
+      "name": "Galactic3 银河",
+      "params": [
+        {
+          "key": "decay",
+          "label": "尾音收敛",
+          "min": 0.05,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.65,
+          "unit": ""
+        },
+        {
+          "key": "brightness",
+          "label": "明亮度",
+          "min": 0.2,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.7,
+          "unit": ""
+        },
+        {
+          "key": "modulation",
+          "label": "空间流动",
+          "min": 0,
+          "max": 0.6,
+          "step": 0.01,
+          "default": 0.15,
+          "unit": ""
+        },
+        {
+          "key": "density",
+          "label": "细节密度",
+          "min": 0.5,
+          "max": 1,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        },
+        {
+          "key": "size",
+          "label": "空间大小",
+          "min": 0.05,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.55,
+          "unit": ""
+        },
+        {
+          "key": "mix",
+          "label": "混响比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.7,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "key": "stereo",
+      "name": "声场扩展",
+      "params": [
+        {
+          "key": "width",
+          "label": "立体宽度",
+          "min": 0,
+          "max": 2,
+          "step": 0.01,
+          "default": 1.25,
+          "unit": ""
+        },
+        {
+          "key": "crossfeed",
+          "label": "交叉馈送",
+          "min": 0,
+          "max": 0.5,
+          "step": 0.01,
+          "default": 0,
+          "unit": ""
+        },
+        {
+          "key": "bassmono",
+          "label": "低频居中截止",
+          "min": 0,
+          "max": 500,
+          "step": 10,
+          "default": 120,
+          "unit": "Hz"
+        },
+        {
+          "key": "output",
+          "label": "输出增益",
+          "min": -12,
+          "max": 0,
+          "step": 0.5,
+          "default": 0,
+          "unit": "dB"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "key": "delay",
+      "name": "延迟 / 回声",
+      "params": [
+        {
+          "key": "time",
+          "label": "延迟时间",
+          "min": 20,
+          "max": 1500,
+          "step": 5,
+          "default": 250,
+          "unit": "ms"
+        },
+        {
+          "key": "feedback",
+          "label": "反馈",
+          "min": 0,
+          "max": 0.85,
+          "step": 0.01,
+          "default": 0.3,
+          "unit": ""
+        },
+        {
+          "key": "mix",
+          "label": "混合比例",
+          "min": 0,
+          "max": 0.65,
+          "step": 0.01,
+          "default": 0.2,
+          "unit": ""
+        },
+        {
+          "key": "damping",
+          "label": "回声高频截止",
+          "min": 500,
+          "max": 16000,
+          "step": 100,
+          "default": 6000,
+          "unit": "Hz"
+        },
+        {
+          "key": "pingpong",
+          "label": "左右交替",
+          "min": 0,
+          "max": 1,
+          "step": 1,
+          "default": 1,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "key": "deesser",
+      "name": "去齿音",
+      "params": [
+        {
+          "key": "frequency",
+          "label": "检测频率",
+          "min": 2000,
+          "max": 12000,
+          "step": 100,
+          "default": 6500,
+          "unit": "Hz"
+        },
+        {
+          "key": "q",
+          "label": "频带 Q",
+          "min": 0.5,
+          "max": 6,
+          "step": 0.1,
+          "default": 2.5,
+          "unit": ""
+        },
+        {
+          "key": "threshold",
+          "label": "启动阈值",
+          "min": -48,
+          "max": -6,
+          "step": 0.5,
+          "default": -24,
+          "unit": "dB"
+        },
+        {
+          "key": "reduction",
+          "label": "最大衰减",
+          "min": 0,
+          "max": 18,
+          "step": 0.5,
+          "default": 6,
+          "unit": "dB"
+        },
+        {
+          "key": "attack",
+          "label": "启动时间",
+          "min": 0.5,
+          "max": 30,
+          "step": 0.5,
+          "default": 3,
+          "unit": "ms"
+        },
+        {
+          "key": "release",
+          "label": "恢复时间",
+          "min": 20,
+          "max": 500,
+          "step": 5,
+          "default": 120,
+          "unit": "ms"
+        },
+        {
+          "key": "mix",
+          "label": "混合比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "key": "dynamic_eq",
+      "name": "动态 EQ",
+      "params": [
+        {
+          "key": "frequency",
+          "label": "中心频率",
+          "min": 20,
+          "max": 16000,
+          "step": 10,
+          "default": 250,
+          "unit": "Hz"
+        },
+        {
+          "key": "q",
+          "label": "频带 Q",
+          "min": 0.2,
+          "max": 12,
+          "step": 0.1,
+          "default": 1,
+          "unit": ""
+        },
+        {
+          "key": "threshold",
+          "label": "启动阈值",
+          "min": -48,
+          "max": 0,
+          "step": 0.5,
+          "default": -24,
+          "unit": "dB"
+        },
+        {
+          "key": "gain",
+          "label": "最大动态增益",
+          "min": -12,
+          "max": 12,
+          "step": 0.5,
+          "default": -4,
+          "unit": "dB"
+        },
+        {
+          "key": "attack",
+          "label": "启动时间",
+          "min": 2,
+          "max": 100,
+          "step": 1,
+          "default": 15,
+          "unit": "ms"
+        },
+        {
+          "key": "release",
+          "label": "恢复时间",
+          "min": 30,
+          "max": 1500,
+          "step": 10,
+          "default": 250,
+          "unit": "ms"
+        },
+        {
+          "key": "mix",
+          "label": "混合比例",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "key": "peq",
+      "name": "参量 EQ / 滤波器",
+      "params": [
+        {
+          "key": "frequency",
+          "label": "频率",
+          "unit": "Hz",
+          "min": 20,
+          "max": 20000,
+          "step": 1,
+          "default": 1000
+        },
+        {
+          "key": "gain",
+          "label": "增益",
+          "unit": "dB",
+          "min": -24,
+          "max": 12,
+          "step": 0.1,
+          "default": 0
+        },
+        {
+          "key": "q",
+          "label": "Q 值",
+          "unit": "",
+          "min": 0.1,
+          "max": 20,
+          "step": 0.01,
+          "default": 0.70710678
+        },
+        {
+          "key": "kind",
+          "label": "滤波类型",
+          "unit": "",
+          "min": 0,
+          "max": 4,
+          "step": 1,
+          "default": 0
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "key": "haas",
+      "name": "旧版延时扩展",
+      "params": [
+        {
+          "key": "delay",
+          "label": "声道延时",
+          "min": 0,
+          "max": 20,
+          "step": 0.1,
+          "default": 3,
+          "unit": "ms"
+        },
+        {
+          "key": "mix",
+          "label": "环绕强度",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.35,
+          "unit": ""
+        },
+        {
+          "key": "direction",
+          "label": "处理方式",
+          "min": 0,
+          "max": 2,
+          "step": 1,
+          "default": 2,
+          "unit": ""
+        },
+        {
+          "key": "bass",
+          "label": "低频保护",
+          "min": 0,
+          "max": 500,
+          "step": 10,
+          "default": 150,
+          "unit": "Hz"
+        },
+        {
+          "key": "output",
+          "label": "输出增益",
+          "min": -12,
+          "max": 0,
+          "step": 0.5,
+          "default": 0,
+          "unit": "dB"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "key": "ffmpeg_haas",
+      "name": "Haas 立体声 · FFmpeg",
+      "params": [
+        {
+          "key": "level_in",
+          "label": "输入增益",
+          "min": 0.015625,
+          "max": 64,
+          "step": 0.015625,
+          "default": 1,
+          "unit": "倍"
+        },
+        {
+          "key": "level_out",
+          "label": "输出增益",
+          "min": 0.015625,
+          "max": 64,
+          "step": 0.015625,
+          "default": 1,
+          "unit": "倍"
+        },
+        {
+          "key": "side_gain",
+          "label": "延时通路增益",
+          "min": 0.015625,
+          "max": 64,
+          "step": 0.015625,
+          "default": 1,
+          "unit": "倍"
+        },
+        {
+          "key": "middle_source",
+          "label": "信号源与极性",
+          "min": 0,
+          "max": 7,
+          "step": 1,
+          "default": 2,
+          "unit": ""
+        },
+        {
+          "key": "left_delay",
+          "label": "左通路延时",
+          "min": 0,
+          "max": 40,
+          "step": 0.01,
+          "default": 2.05,
+          "unit": "ms"
+        },
+        {
+          "key": "left_balance",
+          "label": "左通路声像",
+          "min": -1,
+          "max": 1,
+          "step": 0.01,
+          "default": -1,
+          "unit": ""
+        },
+        {
+          "key": "left_gain",
+          "label": "左通路增益",
+          "min": 0.015625,
+          "max": 64,
+          "step": 0.015625,
+          "default": 1,
+          "unit": "倍"
+        },
+        {
+          "key": "left_phase",
+          "label": "左通路极性",
+          "min": 0,
+          "max": 1,
+          "step": 1,
+          "default": 0,
+          "unit": ""
+        },
+        {
+          "key": "right_delay",
+          "label": "右通路延时",
+          "min": 0,
+          "max": 40,
+          "step": 0.01,
+          "default": 2.12,
+          "unit": "ms"
+        },
+        {
+          "key": "right_balance",
+          "label": "右通路声像",
+          "min": -1,
+          "max": 1,
+          "step": 0.01,
+          "default": 1,
+          "unit": ""
+        },
+        {
+          "key": "right_gain",
+          "label": "右通路增益",
+          "min": 0.015625,
+          "max": 64,
+          "step": 0.015625,
+          "default": 1,
+          "unit": "倍"
+        },
+        {
+          "key": "right_phase",
+          "label": "右通路极性",
+          "min": 0,
+          "max": 1,
+          "step": 1,
+          "default": 1,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "key": "stereofx",
+      "name": "StereoFX 立体声扩展",
+      "params": [
+        {
+          "key": "width",
+          "label": "立体声增强",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.5,
+          "unit": ""
+        },
+        {
+          "key": "mono_bass",
+          "label": "低频居中",
+          "min": 0,
+          "max": 0.7,
+          "step": 0.01,
+          "default": 0,
+          "unit": ""
+        },
+        {
+          "key": "center_squish",
+          "label": "中心声部染色",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0,
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "key": "warmgloss",
+      "name": "暖润光泽",
+      "params": [
+        {
+          "key": "amount",
+          "label": "润色强度",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.75,
+          "unit": ""
+        },
+        {
+          "key": "tube",
+          "label": "管味浓度",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.8,
+          "unit": ""
+        },
+        {
+          "key": "gloss",
+          "label": "高频光泽",
+          "min": 0,
+          "max": 4,
+          "step": 0.1,
+          "default": 3,
+          "unit": "dB"
+        },
+        {
+          "key": "bass",
+          "label": "低频衰减",
+          "min": -6,
+          "max": 0,
+          "step": 0.1,
+          "default": -0.75,
+          "unit": "dB"
+        },
+        {
+          "key": "bass_freq",
+          "label": "低频转折",
+          "min": 60,
+          "max": 250,
+          "step": 1,
+          "default": 160,
+          "unit": "Hz"
+        },
+        {
+          "key": "output",
+          "label": "输出增益",
+          "min": -12,
+          "max": 0,
+          "step": 0.1,
+          "default": -1,
+          "unit": "dB"
+        },
+        {
+          "key": "sag",
+          "label": "低频软化",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.55,
+          "unit": ""
+        },
+        {
+          "key": "recovery",
+          "label": "回弹缓慢度",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "default": 0.5,
+          "unit": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+#define DSB_SIZE 31640u
+#define DSB_FNV 1496434368u

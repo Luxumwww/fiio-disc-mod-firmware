@@ -1,0 +1,4 @@
+extern int open(const char *,int,...),close(int),ioctl(int,unsigned,...),printf(const char *,...);
+static unsigned cfg[74],fix[32],var[40];
+int main(void){int fd=open("/dev/fb0",0);if(fd<0)return 2;cfg[72]=0x12345678;cfg[73]=0x87654321;int r=ioctl(fd,0xc0044702u,cfg);printf("get_config=%d guard=%08x,%08x\n",r,cfg[72],cfg[73]);if(r==0)for(unsigned i=0;i<4;i++){printf("layer=%u",i);for(unsigned j=0;j<18;j++)printf(" %08x",cfg[i*18+j]);printf("\n");}close(fd);for(unsigned i=0;i<4;i++){char path[]="/dev/fb0";path[7]='0'+i;fd=open(path,0);if(fd<0)return 3;int a=ioctl(fd,0x4602,fix),b=ioctl(fd,0x4600,var);printf("fb%u fix=%d var=%d base=%08x len=%u stride=%u size=%ux%u virt=%ux%u offset=%u bpp=%u\n",i,a,b,fix[4],fix[5],fix[11],var[0],var[1],var[2],var[3],var[5],var[6]);close(fd);}return r!=0;}
+__asm__(".text\n.set noreorder\n.globl _start\n_start:\naddiu $sp,$sp,-32\njal main\nnop\nmove $a0,$v0\nli $v0,4001\nsyscall\n");

@@ -1,0 +1,12 @@
+#define _GNU_SOURCE
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <sys/ioctl.h>
+#include <linux/usbdevice_fs.h>
+static int fd;static unsigned get(unsigned a){unsigned v=0;pread(fd,&v,4,a);return v;}
+static void obj(unsigned p,int depth){unsigned w[13]={0};if(!p||depth>1)return;pread(fd,w,sizeof(w),p);printf("obj=%x depth=%d class=%x box=%d,%d,%d,%d flags=%x spec=%x\n",p,depth,w[0],w[5],w[6],w[7],w[8],w[9],w[2]);if(w[2]){unsigned s[12];pread(fd,s,sizeof(s),w[2]);printf(" spec:");for(int i=0;i<12;i++)printf(" %x",s[i]);puts("");unsigned n=s[1];if(n>20)return;for(unsigned i=0;i<n;i++)obj(get(s[0]+i*4),depth+1);}}
+__attribute__((constructor))static void run(void){const char *p=getenv("DISC_INSPECT_PID");if(p){char path[60];snprintf(path,sizeof(path),"/proc/%s/mem",p);fd=open(path,O_RDONLY);printf("proc_fd=%d\n",fd);if(fd>=0&&getenv("DISC_CONTROL_PEEK")){unsigned c[4]={0};pread(fd,c,16,0x7fa53f54);unsigned char data[16]={0};pread(fd,data,16,c[3]);printf("control struct %08x %08x %08x %08x data:",c[0],c[1],c[2],c[3]);for(unsigned i=0;i<16;i++)printf(" %02x",data[i]);puts("");close(fd);fd=-1;}if(fd>=0){unsigned disp=get(0x8e0604);printf("display=%x words:",disp);for(unsigned i=0;i<16;i++)printf(" %x",get(disp+i*4));puts("");obj(get(disp+16),0);printf("TOP\n");obj(get(disp+28),0);printf("SYS\n");obj(get(disp+32),0);obj(get(0x8de408),0);obj(get(0x8deee4),0);close(fd);}}
+ if(getenv("DISC_READ_PALETTE")){const char *node=getenv("DISC_CAMERA_NODE");int dev=open(node?node:"/dev/bus/usb/001/003",O_RDWR);for(unsigned req=0x85;req>=0x81;req-=4){unsigned char d[4]={0};struct usbdevfs_ctrltransfer x={.bRequestType=0xa1,.bRequest=req,.wValue=4<<8,.wIndex=10<<8,.wLength=4,.timeout=600,.data=d};int r=ioctl(dev,USBDEVFS_CONTROL,&x);printf("palette_version_req=%02x result=%d data=%02x %02x %02x %02x\n",req,r,d[0],d[1],d[2],d[3]);}if(dev>=0)close(dev);}
+ int f=open("/dev/bus/usb/001/001",O_RDWR);unsigned char b[4]={0};struct usbdevfs_ctrltransfer c={.bRequestType=0xa3,.bRequest=0,.wIndex=1,.wLength=4,.timeout=500,.data=b};int r=ioctl(f,USBDEVFS_CONTROL,&c);if(getenv("DISC_ENABLE_ROOT_PORT")&&f>=0){struct usbdevfs_ctrltransfer set={.bRequestType=0x23,.bRequest=3,.wValue=8,.wIndex=1,.timeout=500};int v=ioctl(f,USBDEVFS_CONTROL,&set);printf("enable_root_port=%d\n",v);usleep(300000);r=ioctl(f,USBDEVFS_CONTROL,&c);}printf("root=%d port_status=%d %02x %02x %02x %02x\n",f,r,b[0],b[1],b[2],b[3]);if(f>=0)close(f);fflush(stdout);}

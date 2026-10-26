@@ -1,0 +1,9 @@
+#define main old_native_store_checks
+#include "test_native_store_169.c"
+#undef main
+int main(void){snprintf(root,sizeof(root),"/tmp/disc-native-capacity-XXXXXX");assert(mkdtemp(root));put("settings","288 16 16 32\n");DiscChain c={0},next;unsigned master=1;unsigned types[]={4,2,5,14,3,6,0,15};c.count=8;
+ for(unsigned i=0;i<8;i++){DiscChainNode *n=c.nodes+i;n->id=i+3;n->type=types[i];n->enabled=n->type==5;const float *p=n->type==14?disc_ffhaas_default:n->type==15?disc_stereofx_default:disc_param_default[n->type];memcpy(n->params,p,sizeof(n->params));}
+ assert(dsp_shared_ui_store(&c,master));assert(dsp_shared_ui_toggle(7,3)&&!dsp_shared_ui_error);assert(dsp_shared_ui_read(&next,&master)==1&&next.count==9&&next.nodes[8].enabled&&next.nodes[8].type==7);assert(!memcmp(c.nodes,next.nodes,8*sizeof(c.nodes[0])));c=next;
+ for(unsigned i=9;i<16;i++){c.nodes[i]=c.nodes[0];c.nodes[i].id=100+i;c.nodes[i].enabled=0;c.count++;}assert(dsp_shared_ui_store(&c,master));const char *shared="/usr/data/disc-runtime/module-data/disc-remote-control/shared-profile.conf";char before[8192],after[8192];assert(textread(shared,before,sizeof(before)));assert(!dsp_shared_ui_toggle(13,3)&&dsp_shared_ui_error==2);assert(textread(shared,after,sizeof(after))&&!strcmp(before,after));
+ for(unsigned i=0;i<16;i++)c.nodes[i].enabled=i<8;assert(dsp_shared_ui_store(&c,master));assert(textread(shared,before,sizeof(before)));assert(!dsp_shared_ui_toggle(7,3)&&dsp_shared_ui_error==3);assert(textread(shared,after,sizeof(after))&&!strcmp(before,after));
+ const char *names[]={shared,"/usr/data/disc-runtime/module-data/disc-remote-control/settings","/usr/data/disc-runtime/module-data/disc-remote-control/controls.lock"};for(unsigned i=0;i<3;i++)test_unlink(names[i]);assert(!rmdir(root));puts("PASS actual native store/toggle functions: original8 -> ninth Galactic persisted, all existing params unchanged;16 saved and8 active refusals preserve files and report distinct errors");return 0;}

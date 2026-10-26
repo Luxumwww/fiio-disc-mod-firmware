@@ -1,0 +1,19 @@
+# Runtime/private material never belongs in this repository.
+备份/
+**/备份/
+backups/
+**/backups/
+**/上次备份.json
+*.cookie
+*.db
+*.bin
+*.ubifs
+*.squashfs
+*.zip
+*.jks
+*.keystore
+*.pem
+.env*
+**/__pycache__/
+**/build/
+**/reports/

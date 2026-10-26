@@ -1,0 +1,179 @@
+{
+  "version": "DISI-02",
+  "date": "2026-10-26",
+  "base": "FiiO V2.57 / X2000 / 256MiB NAND",
+  "images": {
+    "rootfs.squashfs": {
+      "bytes": 80732160,
+      "sha256": "29e26787c12a3147db48511084a82068b85116dc53818d7220eee2b3c740de51"
+    },
+    "userdata.ubifs": {
+      "bytes": 35807232,
+      "sha256": "f4955f5b79c256d3e2b7aedb9ffdf162f85ad2fbff6ed9523abaf991e9a73d6f"
+    }
+  },
+  "components": [
+    {
+      "id": "disc-adb-tcpip",
+      "release": "releases/1.1.1",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 13
+    },
+    {
+      "id": "disc-audio-diagnostics",
+      "release": "releases/1.0.0",
+      "enabled": false,
+      "disabled": true,
+      "manifest_files_verified": 5
+    },
+    {
+      "id": "disc-audio-dsp",
+      "release": "releases/1.17.0",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 13
+    },
+    {
+      "id": "disc-audio-mandala",
+      "release": "releases/1.0.4",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 5
+    },
+    {
+      "id": "disc-audio-polar",
+      "release": "releases/1.0.13",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 5
+    },
+    {
+      "id": "disc-audio-spectrum",
+      "release": "releases/1.0.2",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 5
+    },
+    {
+      "id": "disc-audio-xy",
+      "release": "releases/1.0.9",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 5
+    },
+    {
+      "id": "disc-bt-lhdcv5",
+      "release": "releases/0.1.7",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 11
+    },
+    {
+      "id": "disc-bt-meter",
+      "release": "releases/1.3.220",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 36
+    },
+    {
+      "id": "disc-diagnostics",
+      "release": "releases/0.3",
+      "enabled": false,
+      "disabled": true,
+      "manifest_files_verified": 4
+    },
+    {
+      "id": "disc-hwaccel",
+      "release": "releases/1.0.7",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 6
+    },
+    {
+      "id": "disc-online-music",
+      "release": "releases/0.7.3",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 11
+    },
+    {
+      "id": "disc-remote-control",
+      "release": "releases/0.8.1",
+      "enabled": false,
+      "disabled": true,
+      "manifest_files_verified": 6
+    },
+    {
+      "id": "disc-runtime-perf",
+      "release": "releases/1.0.5",
+      "enabled": false,
+      "disabled": false,
+      "manifest_files_verified": 13
+    },
+    {
+      "id": "disc-time-sync",
+      "release": "releases/0.1.2",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 4
+    },
+    {
+      "id": "disc-usb-tools",
+      "release": "releases/0.1.20",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 5
+    },
+    {
+      "id": "disc-usbdac-d2p",
+      "release": "releases/1.0.0",
+      "enabled": false,
+      "disabled": true,
+      "manifest_files_verified": 5
+    },
+    {
+      "id": "disc-usbdac-dop",
+      "release": "releases/1.3.3",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 5
+    },
+    {
+      "id": "disc-usbdac-dsd-backend",
+      "release": "releases/1.0.5",
+      "enabled": false,
+      "disabled": true,
+      "manifest_files_verified": 6
+    },
+    {
+      "id": "disc-usbdac-dsd-engine",
+      "release": "releases/1.0.0",
+      "enabled": false,
+      "disabled": true,
+      "manifest_files_verified": 5
+    },
+    {
+      "id": "disc-usbdac-ram-test",
+      "release": "releases/1.0.7",
+      "enabled": false,
+      "disabled": true,
+      "manifest_files_verified": 6
+    },
+    {
+      "id": "disc-usbdac-visuals",
+      "release": "releases/1.0.0",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 5
+    },
+    {
+      "id": "usb-settings",
+      "release": "releases/builtin",
+      "enabled": true,
+      "disabled": false,
+      "manifest_files_verified": 0
+    }
+  ],
+  "new_public_image_hardware_tested": false
+}
