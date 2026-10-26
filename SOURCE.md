@@ -8,7 +8,7 @@ DISI-02：Host 1.3.220 / UI 1.10.220、DSP 1.17.0、硬件合成 provider 1.0.7�
 
 `build-info/host220-build-lock.json` 保留构建输入锁；发布前对其中 178 个直接/递归源码依赖逐项 SHA-256 核对。DSP 的输入锁见 `build-info/dsp117-build-lock.json`。`source-sha256.json` 记录本次公开源文件摘要。版本锁用于识别构建输入，不代替源代码。
 
-固件和源码同一 Release 提供 `DISI-02.zip`、`DISI-02-source.zip` 及 `SHA256SUMS.txt`，源码也直接在仓库中。固件为清理个人数据后的初始化镜像，不是作者个人 NAND 备份。
+固件和源码同一 Release 提供 `DISI-02.zip`、`DISI-02-source.zip` 及 `SHA256SUMS.txt`，源码也直接在仓库中。固件为清理个人数据后的初始化镜像。
 
 ## 主要入口
 
